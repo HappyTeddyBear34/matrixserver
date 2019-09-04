@@ -4,6 +4,7 @@
 #include "CubeApplication.h"
 #include "Joystick.h"
 #include <vector>
+#include <Mpu6050.h>
 
 class PixelFlow : public CubeApplication{
 public:
@@ -12,6 +13,10 @@ public:
 private:
     class Particle;
     class Drop;
+    Mpu6050 Imu;
+    std::vector<Color> allTheColors;
+    std::vector<Color> allTheColorsRainbow;
+    std::vector<Color> allTheColorsRandom;
     std::vector<Joystick *> joysticks;
 };
 
